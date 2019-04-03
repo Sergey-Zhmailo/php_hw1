@@ -14,19 +14,24 @@ h1 {
     text-transform: uppercase;
     text-align: center;
 }
+.table-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    flex-wrap: wrap;
+}
 table {
+    margin-bottom: 20px;
+    min-width: 150px;
+}
+table tbody {
+    width: 90px;
     margin: auto;
-}
-table tr td {
-    padding: 5px;
-    min-width: 125px;
-}
-table tr td .td-container {
+    display: block;
     padding: 15px;
     border: 1px solid dimgrey;
     border-radius: 5px;
     background-color: #e2e2e2;
     box-shadow: 1px 2px 5px #00000040;
-    margin: auto;
-    min-width: 70px;
 }

@@ -12,7 +12,6 @@
     <div class="wrapper">
         <div class="container">
             <h1>Таблица умножения</h1>
-            <table>
 
             <?php
             $m1 = 9; // Предел первого множителя
@@ -24,17 +23,17 @@
                 }
             }
 
+            echo '<div class="table-container">';
             foreach ($table as $k1 => $v1) {
-                echo $k1 == 1 ? '<tr><td><div class="td-container">' : '<td><div class="td-container">';
-                foreach ($v1 as $k2 => $v2) {
-                    echo $k1 . ' * ' . $k2 . ' = ' . $v2 . '<br>';
+                echo '<table><tbody>';
+              foreach ($v1 as $k2 => $v2) {
+                    echo '<tr><td>' . $k1 . ' * ' . $k2 . ' = ' . $v2 . '</td></tr>';
                 }
-                echo '</div></td>';
-                $numberElementsPerRow = 3; // Количество столбиков в ряду
-                echo $k1 % $numberElementsPerRow == 0 ? '</tr>' : '';
+              echo '</tbody></table>';
             }
+
             ?>
-            </table>
+            </div>
         </div>
     </div>
 </body>
